@@ -17,6 +17,19 @@ namespace Main
 
             Iterator it = lista1.getIterator();
 
+            System.Console.WriteLine("-----Imprimimos Lista Original-----");
+
+            while (it.hasNext())
+            {
+                int element = it.next();
+
+                System.Console.WriteLine("Dato: " + element);
+            }
+
+            System.Console.WriteLine("-----Insertamos según posición-----");
+
+            it = lista1.getIterator();
+
             while (it.hasNext())
             {
                 Iterator backupIt = new Iterator(it);
@@ -33,11 +46,20 @@ namespace Main
                 }
             }
 
+            it = lista1.getIterator();
+
+            while (it.hasNext())
+            {
+                int element = it.next();
+
+                System.Console.WriteLine("Dato: " + element);
+            }
+
+            System.Console.WriteLine("-----Eliminamos el valor 3-----");
+
             lista1.delete(3);
 
-            System.Console.WriteLine("---------------------");
-
-            System.Console.WriteLine("El tamaño es:" + lista1.getSize());
+            System.Console.WriteLine("--- El tamaño es:" + lista1.getSize() + " ---");
 
             it = lista1.getIterator();
 
@@ -48,7 +70,7 @@ namespace Main
                 System.Console.WriteLine("Dato: " + element);
             }
 
-            System.Console.WriteLine("---------------------");
+            System.Console.WriteLine("-----Recorremos la lista con el ReverseIterator-----");
 
             ReverseIterator reverseIterator = lista1.getReverseIterator();
 
@@ -59,6 +81,7 @@ namespace Main
                 System.Console.WriteLine("Dato: " + element);
             }
 
+            Console.ReadKey();
             Console.ReadKey();
         }
     }

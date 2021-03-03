@@ -9,8 +9,9 @@ namespace LinkedList
 		private Node head;
 		private Node tail;
 		private int size;
-        internal static readonly int BEFORE;
-        internal static readonly int AFTER;
+
+        internal const int BEFORE = 0;
+        internal const int AFTER = 1;
 
         public void add(int data)
         {
